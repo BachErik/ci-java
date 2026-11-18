@@ -35,7 +35,7 @@ jobs:
         run: echo "date=$(date -u +%Y.%m.%d)" >> "$GITHUB_OUTPUT"
 
       # No layer cache on purpose: a cached apt layer would never pick up new JDKs.
-      - uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v7
         with:
           context: .
           pull: true
