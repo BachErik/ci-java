@@ -3,7 +3,7 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
-      "description": "Keep each JDK on its LTS line (21 stays 21, 25 stays 25); same for Node 22",
+      "description": "Keep each JDK on its LTS line (21 stays 21, 25 stays 25); same for Node 26",
       "matchDatasources": ["docker"],
       "matchPackageNames": ["eclipse-temurin", "node"],
       "matchUpdateTypes": ["major"],
