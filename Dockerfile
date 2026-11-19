@@ -1,12 +1,12 @@
 # ci-java: CI image for the "bacherik-java" Forgejo runner label.
-# node:22-bookworm (act/Forgejo needs Node for JS actions) + the official
+# node:26-bookworm (act/Forgejo needs Node for JS actions) + the official
 # Temurin JDKs copied out of the eclipse-temurin images.
 # Renovate bumps all three FROM tags; no JDK download at job runtime.
 
 FROM eclipse-temurin:21.0.13_9-jdk AS jdk21
 FROM eclipse-temurin:25.0.5_8-jdk AS jdk25
 
-FROM node:22-bookworm
+FROM node:26-bookworm
 
 # /usr/lib/jvm is where Gradle auto-detects toolchains on Linux, so the
 # daemon JVM criteria (21) are met without foojay downloads.

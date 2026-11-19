@@ -1,6 +1,6 @@
 # ci-java
 
-CI container image for my self-hosted [Forgejo runner](https://code.forgejo.org/forgejo/runner): `node:22-bookworm` with the official [Eclipse Temurin](https://adoptium.net/) JDKs **21** and **25** preinstalled.
+CI container image for my self-hosted [Forgejo runner](https://code.forgejo.org/forgejo/runner): `node:26-bookworm` with the official [Eclipse Temurin](https://adoptium.net/) JDKs **21** and **25** preinstalled.
 
 ```
 ghcr.io/bacherik/ci-java
@@ -16,7 +16,7 @@ This image ships the JDKs, so Java jobs don't download anything at runtime and d
 
 |        |                                                                                                    |
 | ------ | -------------------------------------------------------------------------------------------------- |
-| Base   | `node:22-bookworm`, the same image as the plain `bacherik` label, so every JS action keeps working |
+| Base   | `node:26-bookworm`, the same image as the plain `bacherik` label, so every JS action keeps working |
 | JDK 21 | `/usr/lib/jvm/temurin-21`, the default (`JAVA_HOME`, `PATH`)                                       |
 | JDK 25 | `/usr/lib/jvm/temurin-25`                                                                          |
 | Env    | `JAVA_HOME`, `JAVA_HOME_21_X64`, `JAVA_HOME_25_X64`                                                |
@@ -49,7 +49,7 @@ The JDKs are copied unchanged from the official `eclipse-temurin` images (multi-
 ```yaml
 runner:
   labels:
-    - "bacherik:docker://node:22-bookworm"
+    - "bacherik:docker://node:26-bookworm"
     - "bacherik-java:docker://ghcr.io/bacherik/ci-java:2026.11.18"
 ```
 
