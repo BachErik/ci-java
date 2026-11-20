@@ -3,7 +3,7 @@
 # Temurin JDKs copied out of the eclipse-temurin images.
 # Renovate bumps all three FROM tags; no JDK download at job runtime.
 
-FROM eclipse-temurin:21.0.13_9-jdk AS jdk21
+FROM eclipse-temurin:21.0.13.1_2-jdk AS jdk21
 FROM eclipse-temurin:25.0.5_8-jdk AS jdk25
 
 FROM node:26-bookworm
